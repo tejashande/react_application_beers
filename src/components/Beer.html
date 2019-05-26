@@ -1,0 +1,235 @@
+<div style={this.getStyle()}>
+	<label>Id: </label>
+	<input type="text" id="id" name="id" defaultValue={beer.id} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Name: </label>
+	<input type="text" id="name" name="name" defaultValue={beer.name} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Tagline: </label>
+	<input type="text" id="tagline" name="tagline" defaultValue={beer.tagline} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>First Brewed: </label>
+	<input type="text" id="first_brewed" name="first_brewed" defaultValue={beer.first_brewed} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Description: </label>
+	<textarea id="description" name="description" defaultValue={beer.description}></textarea>
+</div>
+<div style={this.getStyle()}>
+	<label>Image URL: </label>
+	<input type="text" id="image_url" name="image_url" defaultValue={beer.image_url} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>ABV: </label>
+	<input type="number" id="abv" name="abv" defaultValue={beer.abv} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>IBU: </label>
+	<input type="number" id="ibu" name="ibu" defaultValue={beer.ibu} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Target FG: </label>
+	<input type="number" id="target_fg" name="target_fg" defaultValue={beer.target_fg} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Target OG: </label>
+	<input type="number" id="target_og" name="target_og" defaultValue={beer.target_og} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>EBC: </label>
+	<input type="number" id="ebc" name="ebc" defaultValue={beer.ebc} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>SRM: </label>
+	<input type="number" id="srm" name="srm" defaultValue={beer.srm} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>PH: </label>
+	<input type="number" id="ph" name="ph" defaultValue={beer.ph} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Attenuation Level: </label>
+	<input type="number" id="attenuation_level" name="attenuation_level" defaultValue={beer.attenuation_level} disable="true" />
+</div>
+<div style={this.getStyle()}>
+	<label>Volume: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Value</th>
+				<th>Unit</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{beer.volume.value}</td>
+				<td>{beer.volume.unit}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div style={this.getStyle()}>
+	<label>Boil Volume: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Value</th>
+				<th>Unit</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{beer.boil_volume.value}</td>
+				<td>{beer.boil_volume.unit}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div style={this.getStyle()}>
+	<label>Method: </label>
+	<label>Mash Temp: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Temp Value</th>
+				<th>Temp Unit</th>
+				<th>Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			{beer.method.mash_temp.map(temperature => 
+				<tr>
+					<td>{temperature.temp.value}</td>
+					<td>{temperature.temp.unit}</td>
+					<td>{temperature.duration}</td>
+				</tr>
+			)}
+		</tbody>
+	</table>
+	<label>Fermentation: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Temp Value</th>
+				<th>Temp Unit</th>
+				<th>Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{beer.method.fermentation.temp.value}</td>
+				<td>{beer.method.fermentation.temp.value}</td>
+				<td>{beer.method.fermentation.duration}</td>
+			</tr>
+		</tbody>
+	</table>
+	<label>Twist: </label>
+	<textarea id="twist" name="twist" defaultValue={beer.method.twist}></textarea>
+</div>
+<div style={this.getStyle()}>
+	<label>Method: </label>
+	<label>Mash Temp: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Temp Value</th>
+				<th>Temp Unit</th>
+				<th>Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			{beer.method.mash_temp.map(temperature => 
+				<tr>
+					<td>{temperature.temp.value}</td>
+					<td>{temperature.temp.unit}</td>
+					<td>{temperature.duration}</td>
+				</tr>
+			)}
+		</tbody>
+	</table>
+	<label>Fermentation: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Temp Value</th>
+				<th>Temp Unit</th>
+				<th>Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{beer.method.fermentation.temp.value}</td>
+				<td>{beer.method.fermentation.temp.value}</td>
+				<td>{beer.method.fermentation.duration}</td>
+			</tr>
+		</tbody>
+	</table>
+	<label>Twist: </label>
+	<textarea id="twist" name="twist" defaultValue={beer.method.twist}></textarea>
+</div>
+<div style={this.getStyle()}>
+	<label>Ingredients: </label>
+	<label>Malt: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Amount Value</th>
+				<th>Amount Unit</th>
+			</tr>
+		</thead>
+		<tbody>
+			{beer.ingredients.malt.map(ingredient => 
+				<tr>
+					<td>{ingredient.name}</td>
+					<td>{ingredient.amount.value}</td>
+					<td>{ingredient.amount.unit}</td>
+				</tr>
+			)}
+		</tbody>
+	</table>
+	<label>Hops: </label>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Amount Value</th>
+				<th>Amount Unit</th>
+				<th>Add</th>
+				<th>Attribute</th>
+			</tr>
+		</thead>
+		<tbody>
+			{beer.ingredients.hops.map(ingredient => 
+				<tr>
+					<td>{ingredient.name}</td>
+					<td>{ingredient.amount.value}</td>
+					<td>{ingredient.amount.unit}</td>
+					<td>{ingredient.add}</td>
+					<td>{ingredient.attribute}</td>
+				</tr>
+			)}
+		</tbody>
+	</table>
+	<label>Yeast: </label>
+	<textarea id="yeast" name="yeast" defaultValue={beer.ingredients.yeast}></textarea>
+</div>
+<div style={this.getStyle()}>
+	<label>Food pairing: </label>
+	<ul>
+		{beer.food_pairing.map(pair => 
+			<li><td>{pair}</td></li>
+		)}
+	</ul>
+</div>
+<div style={this.getStyle()}>
+	<label>Brewers Tips: </label>
+	<textarea id="brewers_tips" name="brewers_tips" defaultValue={beer.brewers_tips}></textarea>
+</div>
+<div style={this.getStyle()}>
+	<label>Contributed By: </label>
+	<textarea id="contributed_by" name="contributed_by" defaultValue={beer.contributed_by}></textarea>
+</div>
